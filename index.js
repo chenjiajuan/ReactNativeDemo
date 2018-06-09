@@ -1,5 +1,5 @@
 import { AppRegistry } from 'react-native';
 // import App from './App';
-import StateTest from './StateTest';
+import FectData from './FectData';
 
-AppRegistry.registerComponent('FirstApp', () => StateTest);
+AppRegistry.registerComponent('FirstApp', () => FectData);

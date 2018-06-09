@@ -1,6 +1,7 @@
 import React,{ Component} from 'react';
-import {Text,StyleSheet,View,TextInput} from 'react-native';
+import {Text,StyleSheet,View,TextInput,ScrollView} from 'react-native';
 import ImageLoad from './ImageLoad'
+import FlatList from './FlatList'
 
 class Blink extends Component{
 	constructor(props){
@@ -37,6 +38,7 @@ export default class BinkApp extends Component{
   }
 	render(){
 		return(
+      <ScrollView style={styles.scrollviewstyle}>
 			<View style={styles.container}>
       <ImageLoad/>
 			<Blink text='blink'/>
@@ -49,12 +51,24 @@ export default class BinkApp extends Component{
        onChangeText={(text)=>this.setState({text})}
        >
       </TextInput>
+      <ImageLoad/>
+      <ImageLoad/>
+      <ImageLoad/>
+      <ImageLoad/>
+      <ImageLoad/>
+      <ImageLoad/>
+      <ImageLoad/>
+      <FlatList/>
 			</View>
+      </ScrollView>
 			);
 	}
 }
 
 const styles = StyleSheet.create({
+  scrollviewstyle:{
+      margin:20,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
